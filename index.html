@@ -2,16 +2,44 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Countdown</title>
+  <title>سيرفر اوتيشيها كونكر</title>
+
+  <!-- Google Font Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>العد التنازلي</h1>
-    <div id="countdown"></div>
+  <div class="overlay">
+    <div class="container">
+
+      <h1 class="welcome">
+        اهلا بكم من جديد في سيرفر اوتيشيها كونكر
+      </h1>
+
+      <div id="countdown" class="countdown"></div>
+
+      <div class="game-link-box">
+        <button id="gameButton" disabled>
+          رابط اللعبة غير متاح حالياً
+        </button>
+      </div>
+
+      <div class="images-section">
+        <div class="img-box"></div>
+        <div class="img-box"></div>
+        <div class="img-box"></div>
+        <div class="img-box"></div>
+      </div>
+
+      <h2 class="gift-text">
+        هدايه التسجيل اول يوم
+      </h2>
+
+    </div>
   </div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
