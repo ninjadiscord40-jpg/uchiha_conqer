@@ -1,4 +1,8 @@
-const targetDate = new Date("March 10, 2026 23:59:59").getTime();
+// مدة 7 أيام
+const sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+// نحسب وقت النهاية
+const targetDate = new Date().getTime() + sevenDays;
 
 const timer = setInterval(function() {
 
@@ -11,12 +15,20 @@ const timer = setInterval(function() {
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   document.getElementById("countdown").innerHTML =
-    days + " يوم " + hours + " ساعة "
-    + minutes + " دقيقة " + seconds + " ثانية ";
+    days + " يوم - " +
+    hours + " ساعة - " +
+    minutes + " دقيقة - " +
+    seconds + " ثانية ";
 
   if (distance < 0) {
     clearInterval(timer);
-    document.getElementById("countdown").innerHTML = "انتهى الوقت!";
+    document.getElementById("countdown").innerHTML = "تم فتح السيرفر!";
+
+    const btn = document.getElementById("gameButton");
+    btn.disabled = false;
+    btn.innerHTML = "الدخول إلى اللعبة";
+    btn.style.backgroundColor = "#00ffcc";
+    btn.style.cursor = "pointer";
   }
 
 }, 1000);
