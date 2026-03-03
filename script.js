@@ -1,5 +1,5 @@
-const sevenDays = 7 * 24 * 60 * 60 * 1000;
-const targetDate = new Date().getTime() + sevenDays;
+// حدد تاريخ ووقت الافتتاح هنا
+const targetDate = new Date("March 10, 2026 12:00:00").getTime();
 
 const timer = setInterval(function() {
 
