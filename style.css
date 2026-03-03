@@ -1,9 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: center;
+  background-image: url("background.jpg"); /* حط صورتك هنا */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.75);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.welcome {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.countdown {
+  color: #00ffcc;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #000;
+}
+
+.game-link-box button {
+  padding: 15px 35px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+  margin-bottom: 40px;
+  transition: 0.3s;
+}
+
+/* ====== صور الجوائز ====== */
+
 .images-section {
   display: flex;
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .img-box {
@@ -21,15 +74,13 @@
   cursor: pointer;
   transition: 0.3s ease;
   overflow: hidden;
-
-  /* إطار ذهبي */
   border: 3px solid gold;
   box-shadow: 
     0 0 10px gold,
     inset 0 0 20px rgba(255, 215, 0, 0.4);
 }
 
-/* تأثير تكبير */
+/* تأثير التكبير */
 .img-box:hover {
   transform: scale(1.12);
   box-shadow: 
@@ -61,7 +112,7 @@
   100% { top: 100%; left: 100%; }
 }
 
-/* خلفيات كل عنصر ستايل MMORPG */
+/* خلفيات كل عنصر */
 
 .vip {
   background: radial-gradient(circle at center, #4b0082, #000);
@@ -82,4 +133,10 @@
 .img-box span {
   position: relative;
   z-index: 2;
+}
+
+.gift-text {
+  color: white;
+  font-size: 24px;
+  margin-top: 15px;
 }
