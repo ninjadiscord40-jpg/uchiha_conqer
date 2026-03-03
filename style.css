@@ -1,75 +1,85 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Cairo', sans-serif;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  direction: rtl;
-  text-align: center;
-}
-
-/* الخلفية انت هتحط صورتك هنا */
-body {
-  background-image: url("background.jpg");
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.75);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  width: 90%;
-  max-width: 900px;
-}
-
-.welcome {
-  color: white;
-  font-size: 28px;
-  margin-bottom: 30px;
-}
-
-.countdown {
-  color: #00ffcc;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.game-link-box button {
-  padding: 15px 30px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
-  background-color: gray;
-  color: white;
-  cursor: not-allowed;
-  margin-bottom: 40px;
-}
-
 .images-section {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 25px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .img-box {
-  width: 100px;
-  height: 100px;
-  background-color: #222;
-  border: 2px solid #00ffcc;
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 18px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffd700;
+  text-shadow: 0 0 8px #000;
+  cursor: pointer;
+  transition: 0.3s ease;
+  overflow: hidden;
+
+  /* إطار ذهبي */
+  border: 3px solid gold;
+  box-shadow: 
+    0 0 10px gold,
+    inset 0 0 20px rgba(255, 215, 0, 0.4);
 }
 
-.gift-text {
-  color: white;
-  font-size: 22px;
+/* تأثير تكبير */
+.img-box:hover {
+  transform: scale(1.12);
+  box-shadow: 
+    0 0 25px gold,
+    0 0 40px orange;
+}
+
+/* لمعة متحركة */
+.img-box::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transform: rotate(25deg);
+  top: -100%;
+  left: -100%;
+  animation: shine 4s infinite;
+}
+
+@keyframes shine {
+  0% { top: -100%; left: -100%; }
+  50% { top: 100%; left: 100%; }
+  100% { top: 100%; left: 100%; }
+}
+
+/* خلفيات كل عنصر ستايل MMORPG */
+
+.vip {
+  background: radial-gradient(circle at center, #4b0082, #000);
+}
+
+.cup {
+  background: radial-gradient(circle at center, #5a2d00, #000);
+}
+
+.cps {
+  background: radial-gradient(circle at center, #001f4d, #000);
+}
+
+.garment {
+  background: radial-gradient(circle at center, #4d0000, #000);
+}
+
+.img-box span {
+  position: relative;
+  z-index: 2;
 }
