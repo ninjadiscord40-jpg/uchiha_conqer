@@ -1,7 +1,4 @@
-// مدة 7 أيام
 const sevenDays = 7 * 24 * 60 * 60 * 1000;
-
-// نحسب وقت النهاية
 const targetDate = new Date().getTime() + sevenDays;
 
 const timer = setInterval(function() {
