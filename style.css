@@ -4,7 +4,7 @@ body {
   font-family: 'Cairo', sans-serif;
   direction: rtl;
   text-align: center;
-  background-image: url("background.jpg"); /* حط صورتك هنا */
+  background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -49,8 +49,6 @@ body {
   transition: 0.3s;
 }
 
-/* ====== صور الجوائز ====== */
-
 .images-section {
   display: flex;
   justify-content: center;
@@ -60,79 +58,27 @@ body {
 }
 
 .img-box {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   border-radius: 18px;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  font-size: 20px;
-  color: #ffd700;
-  text-shadow: 0 0 8px #000;
-  cursor: pointer;
-  transition: 0.3s ease;
-  overflow: hidden;
+  background: radial-gradient(circle at center, #111, #000);
   border: 3px solid gold;
-  box-shadow: 
-    0 0 10px gold,
-    inset 0 0 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 20px gold;
+  transition: 0.3s;
 }
 
-/* تأثير التكبير */
 .img-box:hover {
-  transform: scale(1.12);
-  box-shadow: 
-    0 0 25px gold,
-    0 0 40px orange;
+  transform: scale(1.1);
+  box-shadow: 0 0 35px orange;
 }
 
-/* لمعة متحركة */
-.img-box::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.4),
-    transparent
-  );
-  transform: rotate(25deg);
-  top: -100%;
-  left: -100%;
-  animation: shine 4s infinite;
-}
-
-@keyframes shine {
-  0% { top: -100%; left: -100%; }
-  50% { top: 100%; left: 100%; }
-  100% { top: 100%; left: 100%; }
-}
-
-/* خلفيات كل عنصر */
-
-.vip {
-  background: radial-gradient(circle at center, #4b0082, #000);
-}
-
-.cup {
-  background: radial-gradient(circle at center, #5a2d00, #000);
-}
-
-.cps {
-  background: radial-gradient(circle at center, #001f4d, #000);
-}
-
-.garment {
-  background: radial-gradient(circle at center, #4d0000, #000);
-}
-
-.img-box span {
-  position: relative;
-  z-index: 2;
+.img-box img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
 .gift-text {
